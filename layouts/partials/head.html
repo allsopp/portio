@@ -3,9 +3,9 @@
 <title>{{ .Title }}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<link rel="stylesheet" href="{{ "plugins/slick/slick.css" | absURL }}" />
-<link rel="stylesheet" href="{{ "plugins/slick/slick-theme.css" | absURL }}" />
-<link rel="stylesheet" href="{{ "plugins/font-awesome/css/font-awesome.min.css" | absURL }}" />
+<link rel="stylesheet" href="https://unpkg.com/slick-carousel@1.8.1/slick/slick.css" />
+<link rel="stylesheet" href="https://unpkg.com/slick-carousel@1.8.1/slick/slick-theme.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
 {{ $style := resources.Get "scss/style.scss" | resources.ToCSS | minify }}
 <link href="{{ $style.Permalink }}" rel="stylesheet" />
 <link rel="shortcut icon" href="{{ "images/favicon.ico" | absURL }}" type="image/x-icon" />

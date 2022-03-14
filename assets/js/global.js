@@ -1,15 +1,4 @@
 $(document).ready(() => {
-    // TODO: add these to config.toml
-    const SETTINGS = Object.freeze({
-        BREAKPOINTS: {
-            NAV: 200,
-        },
-        DURATIONS: {
-            SCROLL: 1000,
-            SLICK: 2000,
-        },
-    });
-
     const on_scroll = () => {
       const offset = $(document).scrollTop();
       if (offset > SETTINGS.BREAKPOINTS.NAV)
