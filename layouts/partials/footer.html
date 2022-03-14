@@ -54,13 +54,10 @@
 				<div class="text-light footer__widget_address mb-5">
 					<h4 class="base-font">Address</h4>
 					{{ $address := .Site.Params.address }}
-					<ul class="fa-ul small">
-						<li class="mb-2"><a class="text-light" href="tel:{{ $address.phone }}"><span class="fa-li"><i
-										class="fa fa-phone"></i></span>{{ $address.phone }}</a></li>
-						<li class="mb-2"><a class="text-light" href="mailto:{{ $address.email }}"><span class="fa-li"><i
-										class="fa fa-envelope"></i></span>{{ $address.email }}</a></li>
-						<li class="mb-2">
-							<span class="fa-li"><i class="fa fa-map-marker"></i></span>{{ $address.address }}</a>
+					<ul class="small">
+						<li class="mb-2"><a class="text-light" href="tel:{{ $address.phone }}"><span><i class="bi bi-telephone-fill"></i></span>{{ $address.phone }}</a></li>
+						<li class="mb-2"><a class="text-light" href="mailto:{{ $address.email }}"><span><i class="bi bi-envelope-fill"></i></span>{{ $address.email }}</a></li>
+						<li class="mb-2"><span><i class="bi bi-geo-alt-fill"></i></span>{{ $address.address }}</a>
 						</li>
 					</ul>
 				</div>
@@ -77,8 +74,7 @@
 					<ul class="unstyle-list">
 						{{ $social := .Site.Params.social }}
 						{{ range $social }}
-						<li class="d-inline-block mx-2"><a class="text-light" target="_blank" href="{{ .url }}"><i
-									class="fa {{ .icon }}"></i></a>
+						<li class="d-inline-block mx-2"><a class="text-light" target="_blank" href="{{ .url }}"><i class="bi {{ .icon }}"></i></a>
 						</li>
 						{{ end }}
 					</ul>
