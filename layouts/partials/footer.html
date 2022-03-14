@@ -43,22 +43,20 @@
 				<div class="text-light footer__widget_sitemap mb-5">
 					<h4 class="base-font">Sitemap</h4>
 					<ul class="unstyle-list small">
-						{{ $sitemap := .Site.Menus.sitemap }}
-						{{ range $sitemap }}
-						<li class="mb-2"><a class="text-light" href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+						{{ $sitemap := .Site.Menus.main }}
+						{{ range after 1 $sitemap }}
+						<li class="mb-2"><a class="text-light" href="{{ .URL }}">{{ .Name }}</a></li>
 						{{ end }}
 					</ul>
 				</div>
 			</div>
 			<div class="col-lg-4">
 				<div class="text-light footer__widget_address mb-5">
-					<h4 class="base-font">Address</h4>
+					<h4 class="base-font">Contact</h4>
 					{{ $address := .Site.Params.address }}
 					<ul class="small">
-						<li class="mb-2"><a class="text-light" href="tel:{{ $address.phone }}"><span><i class="bi bi-telephone-fill"></i></span>{{ $address.phone }}</a></li>
-						<li class="mb-2"><a class="text-light" href="mailto:{{ $address.email }}"><span><i class="bi bi-envelope-fill"></i></span>{{ $address.email }}</a></li>
-						<li class="mb-2"><span><i class="bi bi-geo-alt-fill"></i></span>{{ $address.address }}</a>
-						</li>
+						<li class="mb-2"><a class="text-light" href="tel:{{ $address.phone }}"><span><i class="bi bi-telephone-fill"></i></span>{{ $address.phone }}</a>
+						<li class="mb-2"><a class="text-light" href="mailto:{{ $address.email }}"><span><i class="bi bi-envelope-fill"></i></span>{{ $address.email }}</a>
 					</ul>
 				</div>
 			</div>
