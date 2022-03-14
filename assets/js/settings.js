@@ -1,5 +1,5 @@
 const SETTINGS = Object.freeze({
-	BREAKPOINTS: {
+	WAYPOINTS: {
 		NAV: 200,
 	},
 	DURATIONS: {
