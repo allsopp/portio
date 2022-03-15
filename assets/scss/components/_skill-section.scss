@@ -22,26 +22,17 @@
     @include tablet {
       margin-bottom: 30px;
     }
-    &_pattern {
-      position: absolute;
-      top: -11%;
-      left: -17%;
-      z-index: -1;
-      height: 150px;
-      animation: move_top 4s infinite linear;
-      img {
-        height: 100%;
-        width: 100%;
-      }
-    }
     &_image {
       margin-right: 7%;
       @include desktop {
         margin-right: 0;
       }
       img {
-        height: 100%;
-        width: 100%;
+        width: 120%;
+        -webkit-mask: url(/images/mask-b.svg);
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        -webkit-mask-position: center center;
       }
     }
   }
