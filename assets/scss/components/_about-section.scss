@@ -31,12 +31,6 @@
         img {
           height: 100%;
           width: 100%;
-          &.about_mask_svg {
-            mask: url(../images/about/about-mask-svg.svg);
-            -webkit-mask-repeat: no-repeat;
-            -webkit-mask-size: contain;
-            -webkit-mask-position: center center;
-          }
         }
       }
     }
