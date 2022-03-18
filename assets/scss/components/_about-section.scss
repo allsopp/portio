@@ -2,18 +2,15 @@
   overflow: hidden;
   &_content {
     display: flex;
+	margin-left: auto;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     &-thumb {
-      width: 45%;
       position: relative;
-      @include desktop {
-        width: 100%;
-      }
       .about_content-thumb-image {
         img {
-          width: 120%;
+          width: 100%;
           -webkit-mask: url(/images/mask-b.svg);
           -webkit-mask-repeat: no-repeat;
           -webkit-mask-size: contain;
@@ -24,9 +21,9 @@
     &-inner {
       width: 55%;
       padding: 60px 50px;
-      background: #1b2031;
+      background: $secondary;
       border-radius: 20px;
-      margin-left: -60px;
+      margin-left: -100px;
       position: relative;
       @include desktop {
         padding: 25px;
