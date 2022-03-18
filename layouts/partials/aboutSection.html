@@ -5,7 +5,7 @@
         <div class="row text-center">
             <div class="col-lg-6 offset-lg-3">
                 <div class="about_header mb-5">
-                    <span class="top-title">{{ .topTitle }}</span>
+                    <span class="top-title"><br></span>
                     {{ .title | markdownify}}
                 </div>
             </div>
@@ -39,9 +39,9 @@
                             {{ .content | markdownify}}
                         </div>
                         <div>
-                            <a class="btn btn-primary mr-3 btn-zoom"
+                            <a class="btn btn-primary mr-3"
                                 href="{{ .button1Target | absURL }}">{{ .button1Name }}</a>
-                            <a class="btn btn-outline-primary btn-zoom" href="{{ .button2Target | absURL }}">
+                            <a class="btn btn-primary btn-light" href="{{ .button2Target | absURL }}">
                                 {{ .button2Name }} </a>
                         </div>
                     </div>

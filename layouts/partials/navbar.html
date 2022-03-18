@@ -8,7 +8,6 @@
       <span class="navbar-toggler-icon"></span>
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
       <ul class="nav navbar-nav main-navigation my-0 mx-auto">
         {{ $menu := .Site.Menus.main }}
@@ -20,7 +19,7 @@
         {{ end }}
       </ul>
       <div class="navbar-nav">
-        <a href="{{ "contact" | absURL }}" class="btn btn-primary btn-zoom hire_button">Hire Me Now</a>
+        <a href="{{ .Site.Params.ctaLink | absURL }}" class="btn btn-primary hire_button">{{ .Site.Params.ctaText }}</a>
       </div>
     </div>
   </div>
