@@ -1,6 +1,6 @@
 const SETTINGS = Object.freeze({
 	WAYPOINTS: {
-		NAV: 100,
+		NAV: 80,
 	},
 	DURATIONS: {
 		SCROLL: 1000,
