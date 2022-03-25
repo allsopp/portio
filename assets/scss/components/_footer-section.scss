@@ -1,5 +1,5 @@
 .footer {
-    background: $secondary;
+    background: $primary;
     position: relative;
     margin-top: 150px;
     &__background_shape {
@@ -19,7 +19,7 @@
         }
     }
     &__cta {
-        background: $primary;
+        background: $secondary;
         padding: 100px 80px;
         border-radius: 20px;
         display: flex;
@@ -65,7 +65,7 @@
             padding: 70px 40px;
         }
         &_content {
-            width: 60%;
+            width: 100%;
             @include desktop {
                 width: 100%;
                 text-align: center;
