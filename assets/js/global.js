@@ -9,11 +9,10 @@ $(document).ready(() => {
 
   $(".scroll").click(function (e) {
     const $e = $(this.hash);
-	const offset = this.hash == "#contact" ? 300 : 0;
     if ($e.length < 1)
       return;
     e.preventDefault();
-    $("html").animate( { scrollTop: $e.offset().top - offset }, SETTINGS.DURATIONS.SCROLL );
+    $("html").animate( { scrollTop: $e.offset().top }, SETTINGS.DURATIONS.SCROLL );
   });
 
   $(".navbar-nav > li > a").on("click", () => {
