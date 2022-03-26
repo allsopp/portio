@@ -103,7 +103,11 @@
 <script src="https://unpkg.com/gsap@3.9.1/dist/gsap.min.js"></script>
 <script src="https://unpkg.com/imagesloaded@5.0.0/imagesloaded.pkgd.min.js"></script>
 <script src="https://unpkg.com/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
-{{- $settings := resources.Get "js/settings.js" }}
+<script>
+var CONFIG = Object.freeze(
+{{ readFile "/config.json" | safeJS -}}
+);
+</script>
 {{- $global := resources.Get "js/global.js" }}
-{{- $js := slice $settings $global | resources.Concat "js/bundle.js" | minify }}
+{{- $js := slice $global | resources.Concat "js/bundle.js" | minify }}
 <script src="{{ $js.Permalink }}"></script>

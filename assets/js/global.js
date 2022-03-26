@@ -1,7 +1,7 @@
 $(document).ready(() => {
   $(window).scroll(() => {
     const offset = $(document).scrollTop();
-      if (offset > SETTINGS.WAYPOINTS.NAV)
+      if (offset > CONFIG.WAYPOINTS.NAV)
         $("nav").addClass("nav__color__change");
       else
         $("nav").removeClass("nav__color__change");
@@ -12,7 +12,7 @@ $(document).ready(() => {
     if ($e.length < 1)
       return;
     e.preventDefault();
-    $("html").animate( { scrollTop: $e.offset().top }, SETTINGS.DURATIONS.SCROLL );
+    $("html").animate( { scrollTop: $e.offset().top }, CONFIG.DURATIONS.SCROLL );
   });
 
   $(".navbar-nav > li > a").on("click", () => {
@@ -40,7 +40,7 @@ $(document).ready(() => {
     dots: true,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: SETTINGS.DURATIONS.SLICK,
+    autoplaySpeed: CONFIG.DURATIONS.SLICK,
     responsive: [
       {
         breakpoint: 992,
