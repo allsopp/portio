@@ -22,6 +22,7 @@ $(document).ready(() => {
   $(".service__slider").slick({
     infinite: false,
     slidesToShow: 3,
+    dots: true,
     arrows: false,
     responsive: [
       {

@@ -39,3 +39,12 @@ VERSION:	1.0.0
 @import "components/contact";
 
 @import "components/case_details";
+
+.slick-dots {
+    > li {
+        display: inline-block;
+    }
+    > li:only-child {
+        display: none;
+    }
+}

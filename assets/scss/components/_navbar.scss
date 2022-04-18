@@ -1,3 +1,15 @@
+#site-logo-m {
+	width: 300px;
+	display: none;
+	@include desktop { display: block; }
+}
+
+#site-logo {
+	width: 500px;
+	display: block;
+	@include desktop { display: none; }
+}
+
 .navbar {
     padding: 40px 0;
     background: transparent;
