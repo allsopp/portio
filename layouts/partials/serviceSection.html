@@ -1,12 +1,6 @@
 {{ with .Site.Data.serviceSection }}
 {{ if .enable }}
 <section class="section service" id="service">
-    <div class="service__background">
-        <svg viewBox="0 0 1283 1126">
-            <path fill="#f1f6f9" d="M100 0h1183v1126l-1183-80A100 100 0 010 946V100A100 100 0 01100 0z"
-                data-name="Path 1369" />
-        </svg>
-    </div>
     <div class="service__background_shape">
         <svg viewBox="0 0 550 550">
             <defs>
@@ -22,27 +16,23 @@
         </svg>
     </div>
     <div class="container">
-        <div class="row">
-            <div>
-                <div class="service__header mb-5">
-                    <span class="top-title"><br></span>
-                    {{ .title | markdownify }}
-                </div>
-            </div>
+        <div class="service__header">
+            {{ .title | markdownify }}
         </div>
-        <div class="row">
             <div class="col-12">
                 <div class="service__slider">
                     {{ $Section := .service }}
                     {{ range $Section }}
                     <div class="service__slider_item">
-                        <div class="mt-5">
+                        <div class="mt-3">
                             {{ .content | markdownify }}
                         </div>
                     </div>
                     {{ end }}
                 </div>
             </div>
+        <div>
+            <a href="#contact" data-value="{{ .ctaMessage | htmlEscape }}" class="btn btn-primary scroll">{{ .cta | markdownify }}</a>
         </div>
     </div>
 </section>

@@ -1,11 +1,11 @@
 #site-logo-m {
-	width: 300px;
+    width: 100%;
+	max-width: 250px;
 	display: none;
 	@include desktop { display: block; }
 }
 
 #site-logo {
-	width: 500px;
 	display: block;
 	@include desktop { display: none; }
 }
@@ -16,18 +16,9 @@
     transition: all 0.3s ease;
     @include desktop {
         background: $white;
-    }
-    @include desktop {
         padding: 15px 20px;
         margin: 10px 10px 0;
         border-radius: 5px;
-    }
-    .navbar-brand {
-        img {
-            @include desktop {
-                width: 80%;
-            }
-        }
     }
     &.nav__color__change {
         background: $white;
@@ -35,6 +26,11 @@
         box-shadow: 0px 10px 20px 0px rgba(50, 65, 141, 0.1);
         @include desktop {
             padding: 15px 20px;
+        }
+    }
+    @include mobile {
+        .navbar-brand {
+            width: calc(100% - 50px);
         }
     }
     @include desktop {

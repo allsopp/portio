@@ -1,12 +1,9 @@
 .hero {
-  padding: 200px 0 0 0;
+  padding: 150px 0 0 0;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  @include desktop {
-    padding: 150px 0 30px 0;
-  }
   &_background-svg {
     position: absolute;
     top: 0;
@@ -19,7 +16,7 @@
     }
   }
   &_content {
-    padding: 0 20px 0 0;
+    text-align: center;
     position: relative;
     @include desktop {
       text-align: center;
@@ -40,17 +37,13 @@
         display: none;
       }
     }
-    span {
-      font-size: 24px;
-      position: relative;
-      display: block;
-      margin: 0 0 20px 30px;
-      @include desktop {
-        display: inline-block;
+    p { 
+      font-size: 2rem;
+      margin: 2rem;
+      @include mobile {
+        font-size: 1.5rem;
+	margin: 1rem;
       }
-    }
-    p {
-      font-size: $font-size-lg;
     }
   }
   &_figure {
