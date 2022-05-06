@@ -13,8 +13,9 @@ $(document).ready(() => {
       return;
     e.preventDefault();
     $("html").animate( { scrollTop: $e.offset().top }, CONFIG.DURATIONS.SCROLL );
-    if (this.dataset.value)
-      $("form").find("[name=message]").val(this.dataset.value).focus();
+    const $msg = $("form [name=message]");
+    if (this.dataset.value && !msg.val())
+      $msg.val(this.dataset.value).focus();
   });
 
   $(".navbar-nav > li > a").on("click", () => {
