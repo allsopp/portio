@@ -1,9 +1,10 @@
 .service {
+    background: $secondary;
+    padding-bottom: 50px;
     .btn { margin-top: 2rem; }
     text-align: center;
     position: relative;
     overflow: hidden;
-    padding-bottom: 0;
     &__background {
         position: absolute;
         top: 0;
@@ -17,7 +18,7 @@
     }
     &__background_shape {
         position: absolute;
-        bottom: -10%;
+	top: 20%;
         left: -7%;
         height: 465px;
         width: 410px;
