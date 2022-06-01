@@ -12,7 +12,7 @@ $(document).ready(() => {
     if ($e.length < 1)
       return;
     e.preventDefault();
-    $("html").animate( { scrollTop: $e.offset().top }, CONFIG.DURATIONS.SCROLL );
+    $("html").animate( { scrollTop: $e.offset().top - 100 }, CONFIG.DURATIONS.SCROLL );
     const $msg = $("form [name=message]");
     if (this.dataset.value && !$msg.val())
       $msg.val(this.dataset.value).focus();
