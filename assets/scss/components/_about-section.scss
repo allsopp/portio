@@ -28,8 +28,11 @@
       border-radius: 20px;
       margin-left: -100px;
       position: relative;
+      .btn { width: 40%; }
+      .cta { text-align: center; }
       @include desktop {
         padding: 25px;
+        .btn { width: 100%; }
       }
       @include desktop {
         width: 100%;

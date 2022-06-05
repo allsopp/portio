@@ -10,7 +10,11 @@
 
 .profile {
   blockquote { font-size: 1.15rem; font-style: italic; margin: 2.25rem 0; }
-  .photo { width: 170px; height: 170px; float: right; margin: 6.25rem 0 1rem 2rem;  object-fit: cover; object-position: -50% 0; border-radius: 1rem; }
+  .photo { width: 170px; height: 170px; float: right; margin: 6.25rem 0 1rem 2rem; object-fit: cover; object-position: -50% 0; border-radius: 1rem; }
+  @include desktop { 
+    .photo { margin: 2rem auto; float: none; display: block; }
+    h1 { text-align: center; }
+  }
   .logo { margin: 1rem auto 2rem auto; max-width: 100%; }
   .logo-small { margin: 0 auto; max-width: 100%; margin: 1rem auto; }
   color: #000;

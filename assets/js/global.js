@@ -14,11 +14,13 @@ $(document).ready(() => {
     e.preventDefault();
     $("html").animate( { scrollTop: $e.offset().top - 100 }, CONFIG.DURATIONS.SCROLL );
     const $msg = $("form [name=message]");
-    if (this.dataset.value && !$msg.val())
-      $msg.val(this.dataset.value).focus();
+    if (this.dataset.value && !$msg.val()) {
+      $msg.val(this.dataset.value);
+      $("form input").first().focus();
+    }
   });
 
-  $(".navbar-nav > li > a").on("click", () => {
+  $(".navbar-nav a").on("click", () => {
     $(".navbar-collapse").collapse("hide");
   });
 
