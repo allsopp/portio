@@ -18,6 +18,10 @@
           -webkit-mask-repeat: no-repeat;
           -webkit-mask-size: contain;
           -webkit-mask-position: center center;
+          @include desktop {
+            -webkit-mask: none;
+            border-radius: 2rem;
+          }
         }
       }
     }
