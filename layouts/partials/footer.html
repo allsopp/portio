@@ -112,3 +112,11 @@ var CONFIG = Object.freeze(
 {{- $global := resources.Get "js/global.js" }}
 {{- $js := slice $global | resources.Concat "js/bundle.js" | minify }}
 <script src="{{ $js.Permalink }}"></script>
+<link rel="preload" href="https://unpkg.com/slick-carousel@1.8.1/slick/slick.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="https://unpkg.com/slick-carousel@1.8.1/slick/slick-theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="https://unpkg.com/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" href="https://unpkg.com/slick-carousel@1.8.1/slick/slick-theme.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+</noscript>
