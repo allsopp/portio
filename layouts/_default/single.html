@@ -13,7 +13,7 @@
 <body>
 <div class="profile">
 <a href="/"><img class="logo" src="/images/logo-m.png"></a>
-<img class="photo" src="/images/LaurenWorkPhoto1.jpg">
+<img class="photo" src="{{ .Params.image | absURL }}" loading="lazy">
 {{ .Content }}
 <div class="contact">
 {{ .Title }}
