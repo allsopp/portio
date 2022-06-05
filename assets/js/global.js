@@ -56,9 +56,6 @@ $(document).ready(() => {
     ],
   });
 
-  const portfolio = $(".portfolio-item-grid").masonry({ itemSelector: ".portfolio-item" });
-  portfolio.imagesLoaded().progress(() => { portfolio.masonry("layout") });
-
   new TimelineMax({
     yoyo: true,
     repeat: -1,
