@@ -15,7 +15,7 @@
                 fill: $white;
             }
         }
-        @include mobile {
+        @include desktop-lg {
             display: none;
         }
     }
